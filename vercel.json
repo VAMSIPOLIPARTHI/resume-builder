@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "backend/index.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "backend/index.py" }
+  ],
+  "devCommand": "uvicorn backend.main:app --port 8000 --reload"
+}
